@@ -1,0 +1,140 @@
+body{
+    margin: 5px;
+    background-color: #466BFF;
+}
+
+.trel-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: start;
+}
+
+.trel__todo-board{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100px;
+    background-color: #E2E2E2;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    justify-content: space-between
+}
+
+.trel__todo-title{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.trel__todo-container-task{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.trel__todo-task-container{
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.dragged{
+    position: absolute;
+    z-index: 999;
+    pointer-events: none;
+    cursor: grabbing;
+    border-radius: 20px;
+    background-color: white;
+    padding: 0;
+}
+
+.trel__todo-task{/*задача*/
+    padding: 7px 19px 7px 7px;
+    border-radius: 5px;
+    word-break: break-all;
+    width: 100%;
+   
+   
+}
+
+.trel__todo-task-close{
+    display: block;
+    width: 15px;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+   
+    
+}
+
+/*.trel__todo-task-close::after{
+    position: absolute;
+    content: '\2573';
+    top: 0;
+    right: 3px;
+    font-size: 10px;
+}
+
+/*.trel__todo-task-close-task{крестик
+    display: block;
+}*/
+
+.trel__todo-task-add{
+    font-size: 15px;
+    text-align: left;
+    border: none;
+    background-color: #E2E2E2;
+    color: #686666e0;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.trel__todo-task-add:hover{
+    color: #363636e0;
+}
+
+.trel__todo-task-add-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.trel__todo-task-add-contaiener-textarea{
+    width: 100%;
+    min-height: 50px;
+    resize: none;
+    border: none;
+    outline: none;
+}
+
+.trel__todo-task-add-contaiener-btnadd{
+    display: block;
+    color: white;
+    background-color: green;
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
+.trel__todo-task-add-contaiener-btnadd:hover{
+    background-color: rgb(0, 96, 0);
+    color: gray;
+}
+
+.trel__todo-task-add-contaiener-btnclose::after{
+    display: block;
+    content: '\2573';
+    color:gray;
+    cursor: pointer;
+}
+
+.trel__todo-task-add-contaiener-btnclose:hover::after {
+    color:black;
+}
+
