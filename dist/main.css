@@ -19,7 +19,8 @@ body{
     border-radius: 5px;
     padding: 10px;
     box-sizing: border-box;
-    justify-content: space-between
+    justify-content: space-between;
+    /*position: relative;*/
 }
 
 .trel__todo-title{
@@ -31,7 +32,7 @@ body{
 .trel__todo-container-task{
     display: flex;
     flex-direction: column;
-    position: relative;
+    /*position: relative;*/
 }
 
 .trel__todo-task-container{
@@ -39,7 +40,7 @@ body{
     background-color: white;
     justify-content: space-between;
     margin-bottom: 10px;
-    position: relative;
+    /*position: relative;*/
 }
 
 .dragged{
@@ -57,8 +58,6 @@ body{
     border-radius: 5px;
     word-break: break-all;
     width: 100%;
-   
-   
 }
 
 .trel__todo-task-close{
@@ -67,8 +66,6 @@ body{
     font-size: 12px;
     text-align: center;
     cursor: pointer;
-   
-    
 }
 
 /*.trel__todo-task-close::after{

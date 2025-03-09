@@ -63,6 +63,8 @@ export default class AddTask{
                 e.preventDefault();
                 actualElement = e.target;
                 actualElement.classList.add('dragged')
+                actualElement.style.width = '60px';
+                actualElement.style.height = '30px';
                 this.trelContainer.addEventListener('mouseup', onMouseUp);
                 this.trelContainer.addEventListener('mouseover', onMouseOver)
             }
@@ -70,6 +72,8 @@ export default class AddTask{
 
         const onMouseUp = ()=>{
             actualElement.classList.remove('dragged');
+            actualElement.style.width = '100%';
+            actualElement.style.height = '';
             actualElement = undefined;
             this.trelContainer.removeEventListener('mouseup', onMouseUp);
             this.trelContainer.removeEventListener('mouseover', onMouseOver)
